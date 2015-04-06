@@ -20,6 +20,10 @@ Central Perk
 - User centered design that is accessable on multiple platforms
 - Better familiarity with underlying js engines
 
+# Responsibilities
+- Hayden implement search functions and comparative metrics, make sure data has intergrity (lodash, Jquery)
+
+
 # Milestones
 - Create a wireframe view/layout with jade
 - Incorporate data into design and create usable comparative metrics
