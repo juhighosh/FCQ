@@ -22,10 +22,21 @@ Central Perk
 
 # Responsibilities
 - Hayden implement search functions and comparative metrics, make sure data has intergrity (lodash, Jquery)
-
+- Juhi create wireframe view/layout with jade, responsiveness through Modernizer
+- Michael comparative views and incorporating design
 
 # Milestones
 - Create a wireframe view/layout with jade
 - Incorporate data into design and create usable comparative metrics
-- Make a working mobile version
+- Make a working responsive web using Modernizer
 - Create a comparative view with graphs, charts, etc... (possibly suggestions based on preferences)
+
+# Peer Feedback
+- 3 Questions
+	1. How to view the templating of the website? --> Search based, with visualizations and best teacher. 
+	2. How to access the data? --> Static data
+	3. Minimum set of requirements? --> Search based results with basic comparative table view.
+- 3 Must Have Features
+	1. Comparative View
+	2. Searchability for classes
+	3. Simple visualizations
