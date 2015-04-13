@@ -1,0 +1,11 @@
+extends ../layout.jade
+
+block content         
+
+	h1= item['name']
+
+	h2 Courses Taught
+	each s in item['Courses']
+		div.row
+			div.five.columns
+				li= s['subject'] + ' ' + s['number']
