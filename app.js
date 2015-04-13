@@ -23,11 +23,7 @@ app.get('/', function(req, res) {
 
 // load routes for note, account, context
 require('./routes/courseList')(app)
-require('./routes/courseListTerm')(app)
-require('./routes/courseListName')(app)
-require('./routes/departmentList')(app)
-require('./routes/instructorList')(app)
-require('./routes/instructorView')(app)
+
 
 app.set('port', (process.env.PORT || 3000))
 
