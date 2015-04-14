@@ -6,11 +6,11 @@ module.exports = function(app) {
         var courses = app.db.get('courses')
 
         // compose a query to look up docs whose 'categories' field contains the word 'Doctors'
-        var q = {AVG_GRD: { $gt: 3.5} }
+        var q = {AVG_GRD: { $gt: 3.75} }
 
         // execute the query to find those matched limiting to 20
         courses.find(q, {
-            limit: 20
+            limit: 0
         }, function(err, docs) {
             
             res.render('course/list.jade', {
