@@ -28,6 +28,7 @@ require('./routes/courseListName')(app)
 require('./routes/departmentList')(app)
 require('./routes/instructorList')(app)
 require('./routes/instructorView')(app)
+require('./routes/search')(app)
 
 app.set('port', (process.env.PORT || 3000))
 

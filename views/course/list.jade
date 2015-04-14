@@ -14,7 +14,7 @@ block content
         div.four.columns
             | Ratings        
 
-    each item in courses
+    each item in course
         div.row
             div.one.column
                 include field_year
@@ -22,8 +22,8 @@ block content
                 include field_term
             div.two.columns
                 include field_name
-            div.three.columns
+            div.two.columns
                 include field_instructors
-            div.four.columns
-                include field_ratings
+            div.two.columns
+                include field_grade
 
