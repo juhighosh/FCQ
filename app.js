@@ -30,6 +30,17 @@ require('./routes/instructorList')(app)
 require('./routes/instructorView')(app)
 require('./routes/search')(app)
 
+
+var departments = require('./departments.json')
+
+app.get('/major/easy', function(req, res) {
+    res.render('listDepartment.jade', {
+        departments: departments
+    })
+    console.log(departments)
+})
+
+
 app.set('port', (process.env.PORT || 3000))
 
 var server = app.listen(app.get('port'), function() {

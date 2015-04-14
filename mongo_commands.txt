@@ -1,0 +1,2 @@
+Mongo commands
+printjson(db.courses.aggregate([{ $group: { _id: "$Subject_Label", avggrd: {$avg:"$AVG_GRD"} }} ] ))

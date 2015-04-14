@@ -1,0 +1,9 @@
+extends layout.jade
+block content
+
+ each item in departments
+  div.row
+    div.two.columns
+        = item._id
+    div.two.columns
+        = item.avggrade
