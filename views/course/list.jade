@@ -13,7 +13,7 @@ block content
         div.three.columns
             | Instructor
         div.four.columns
-            | Ratings        
+            | Buff Score        
 
     each item in course
         div.row
@@ -27,3 +27,5 @@ block content
                 include field_instructors
             div.two.columns
                 include field_grade
+            svg(width='50', height='50')
+             rect(x='0', y='0', width='50', height='50', fill='green')
