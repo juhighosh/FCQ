@@ -1,6 +1,7 @@
 var express = require('express')
 var app = express()
 
+
 // dburl to a mongodb server hosted in the cloud (i.e., mongolab)
 var dburl = 'mongodb://ucdd:hackathon@ds043971.mongolab.com:43971/fcq'
 
@@ -34,6 +35,7 @@ require('./routes/search')(app)
 var departments = require('./departments.json')
 
 app.get('/major/easy', function(req, res) {
+	
     res.render('listDepartment.jade', {
         departments: departments
     })

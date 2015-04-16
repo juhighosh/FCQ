@@ -14,7 +14,7 @@ module.exports = function(app) {
         }, function(err, docs) {
 
             res.render('course/list.jade', {
-                courses: docs
+                course: docs
 
             })
             console.log(docs)
