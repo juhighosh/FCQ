@@ -42,6 +42,14 @@ app.get('/major/easy', function(req, res) {
     console.log(departments)
 })
 
+app.get('/graph', function(req, res) {
+	
+    res.render('graph.jade', {
+
+    })
+
+})
+
 
 app.set('port', (process.env.PORT || 3000))
 
