@@ -30,7 +30,7 @@ require('./routes/departmentList')(app)
 require('./routes/instructorList')(app)
 require('./routes/instructorView')(app)
 require('./routes/search')(app)
-
+require('./routes/graph2')(app)
 
 var departments = require('./departments.json')
 
