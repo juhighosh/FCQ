@@ -31,6 +31,7 @@ require('./routes/instructorList')(app)
 require('./routes/instructorView')(app)
 require('./routes/search')(app)
 require('./routes/graph2')(app)
+require('./routes/graph')(app)
 
 var departments = require('./departments.json')
 
@@ -42,13 +43,6 @@ app.get('/major/easy', function(req, res) {
     console.log(departments)
 })
 
-app.get('/graph', function(req, res) {
-	
-    res.render('graph.jade', {
-
-    })
-
-})
 
 
 app.set('port', (process.env.PORT || 3000))

@@ -1,7 +1,19 @@
-script(type='text/javascript').
-var svg = dimple.newSvg("body", 800, 600);
-var chart = new dimple.chart(svg, item);
-chart.addCategoryAxis("x", "Word");
-chart.addMeasureAxis("y", "Awesomeness");
-chart.addSeries(null, dimple.plot.bar);
-chart.draw();
+extends layout.jade
+
+block content
+ div.eight.column
+   = course
+ script(type='text/javascript').
+  var data=!{JSON.stringify(course)};
+  var svg = dimple.newSvg("body", 800, 600)
+  var chart = new dimple.chart(svg, data)
+  chart.addCategoryAxis("x", "Subject")
+  chart.addMeasureAxis("y", "AVG_GRD")
+  chart.addSeries(null, dimple.plot.bar)
+  chart.draw()
+
+
+
+
+
+

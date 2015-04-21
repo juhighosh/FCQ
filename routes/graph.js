@@ -1,6 +1,6 @@
 module.exports = function(app) {
 
-    app.get('/graph2', function(req, res) {
+    app.get('/graph', function(req, res) {
 
         // get the courses collection
         var courses = app.db.get('courses')
@@ -10,14 +10,14 @@ module.exports = function(app) {
 
         // execute the query to find those matched limiting to 20
         courses.find(q, {
-            limit: 100
+            limit: 15
         }, function(err, docs) {
 
-            res.render('graph2.jade', {
-                course: JSON.stringify(docs)
+            res.render('graph.jade', {
+                course: docs
 
             })
-            //console.log(docs)
+            console.log(docs)
         })
     })
 
