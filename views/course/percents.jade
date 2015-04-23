@@ -1,7 +1,10 @@
-svg(width=1000*item['PCT_A'], height='50')
-  rect(x='50', y=item['AVG_GRD'], width='50', height='50', fill='green')
-svg(width=10*item['AVG_GRD'], height='50')
-  rect(x='50', y=item['AVG_GRD'], width='50', height='50', fill='red')
-svg(width=10*item['AVG_GRD'], height='50')
-  rect(x='50', y=item['AVG_GRD'], width='50', height='50', fill='orange')
-
+script(type='text/javascript').
+  var data=!{JSON.stringify(course)};
+  var svg = dimple.newSvg("body", 1000, 600)
+  var myChart = new dimple.chart(svg, data);
+  myChart.setBounds(60, 30, 900, 305);
+  var x = myChart.addCategoryAxis("x", "YearTerm");
+  x.addOrderRule("Date");
+  myChart.addCategoryAxis("y", "AVG_GRD");
+  var s = myChart.addSeries(null, dimple.plot.line);
+  myChart.draw();

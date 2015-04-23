@@ -1,0 +1,15 @@
+extends layout.jade
+
+block content
+ div.eight.column
+   = JSON.stringify(course)
+ script(type='text/javascript').
+  var data=!{JSON.stringify(course)};
+  var svg = dimple.newSvg("body", 800, 600)
+  var myChart = new dimple.chart(svg, data);
+  myChart.setBounds(60, 30, 505, 305);
+  var x = myChart.addCategoryAxis("x", "YearTerm");
+  x.addOrderRule("Date");
+  myChart.addMeasureAxis("y", "AVG_GRD");
+  var s = myChart.addSeries(null, dimple.plot.line);
+  myChart.draw();
