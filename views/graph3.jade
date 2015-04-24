@@ -1,0 +1,22 @@
+extends layout.jade
+
+block content
+ script(type='text/javascript').
+  var data=!{JSON.stringify(course)};
+  var svg = dimple.newSvg("body", 1000, 800)
+  var chart = new dimple.chart(svg, data)
+  var x = chart.addCategoryAxis("x", "Subject_Label")
+  var y = chart.addMeasureAxis("y", "AVG_GRD")
+  
+  var A = chart.addSeries("Avg", dimple.plot.bar, [x, y]);
+  A.aggregate = dimple.aggregateMethod.avg;
+  
+  y.tickFormat = ',.2f'
+   //chart.addSeries(null, dimple.plot.bar)
+  chart.draw()
+
+
+
+
+
+
