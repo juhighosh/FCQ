@@ -8,11 +8,11 @@ block content
   var x = chart.addCategoryAxis("x", "Subject_Label")
   var y = chart.addMeasureAxis("y", "AVG_GRD")
   
-  var A = chart.addSeries("Avg", dimple.plot.bar, [x, y]);
-  A.aggregate = dimple.aggregateMethod.avg;
+  var A = chart.addSeries("Subject_Label", dimple.plot.bar, [x, y]);
+  A.aggregate = dimple.aggregateMethod.count
   
   y.tickFormat = ',.2f'
-   //chart.addSeries(null, dimple.plot.bar)
+  
   chart.draw()
 
 

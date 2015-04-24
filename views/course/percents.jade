@@ -6,6 +6,8 @@ script(type='text/javascript').
   myChart.setBounds(60, 30, 900, 305);
   var x = myChart.addCategoryAxis("x", "YearTerm");
   x.addOrderRule("Date");
-  myChart.addCategoryAxis("y", "AVG_GRD");
-  var s = myChart.addSeries(null, dimple.plot.line);
+  var y = myChart.addCategoryAxis("y", "AVG_GRD");
+  y.overrideMin =0
+  var s = myChart.addSeries(null, dimple.plot.bubble);
+  var z = myChart.addSeries(null, dimple.plot.line);
   myChart.draw();
