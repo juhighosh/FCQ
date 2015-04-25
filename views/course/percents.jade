@@ -1,7 +1,7 @@
 
 script(type='text/javascript').
   var data=!{JSON.stringify(course)};
-  var svg = dimple.newSvg("body", 1000, 600)
+  var svg = dimple.newSvg("body", 1200, 400)
   svg.append("rect")
       .attr("x", "8px")
       .attr("y", "8px")
@@ -13,7 +13,9 @@ script(type='text/javascript').
   var x = myChart.addCategoryAxis("x", "YearTerm");
   x.addOrderRule("Date");
   var y = myChart.addCategoryAxis("y", "AVG_GRD");
+  var c = myChart.addCategoryAxis("z", "insname1")
   y.overrideMin =0
-  var s = myChart.addSeries(null, dimple.plot.bubble);
+  var s = myChart.addSeries(["insname1", "CourseTitle"], dimple.plot.bubble);
   var z = myChart.addSeries(null, dimple.plot.line);
+  myChart.addLegend(850, 50, 380, 320, "right");
   myChart.draw();
