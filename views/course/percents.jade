@@ -2,6 +2,12 @@
 script(type='text/javascript').
   var data=!{JSON.stringify(course)};
   var svg = dimple.newSvg("body", 1000, 600)
+  svg.append("rect")
+      .attr("x", "8px")
+      .attr("y", "8px")
+      .attr("width", "100%")
+      .attr("height", "100%")
+      .style("fill", "rgb(222, 230, 237)");
   var myChart = new dimple.chart(svg, data);
   myChart.setBounds(60, 30, 900, 305);
   var x = myChart.addCategoryAxis("x", "YearTerm");
