@@ -1,415 +1,142 @@
 extends layout.jade
 block content
     script(type='text/javascript').
-      var svg = dimple.newSvg("body", 1500, 1000);
+      var svg = dimple.newSvg("body", 1900, 800);
       var data = [
-            {
-                  "class" : "Applied Math",
-                  "avggrd" : 2.8597217068645633
-            },
-            {
-                  "class" : "Presidents Leadership Class",
-                  "avggrd" : 3.686046511627907
-            },
-            {
-                  "class" : "INVST Community Studies",
-                  "avggrd" : 3.6517857142857157
-            },
-            {
-                  "class" : "Chemical Engineering",
-                  "avggrd" : 3.226335227272723
-            },
-            {
-                  "class" : "Engineering Honors",
-                  "avggrd" : 3.9684
-            },
-            {
-                  "class" : "Leadership Minor",
-                  "avggrd" : 3.36
-            },
-            {
-                  "class" : "Environmental Studies",
-                  "avggrd" : 3.4614068441064654
-            },
-            {
-                  "class" : "Honors",
-                  "avggrd" : 3.7762000000000002
-            },
-            {
-                  "class" : "Farsi",
-                  "avggrd" : 3.717619047619048
-            },
-            {
-                  "class" : "Farrand Residential Acad Prgm",
-                  "avggrd" : 3.4306060606060598
-            },
-            {
-                  "class" : "Chinese",
-                  "avggrd" : 3.293412322274882
-            },
-            {
-                  "class" : "Asian American Studies",
-                  "avggrd" : 3.4259999999999997
-            },
-            {
-                  "class" : "Chicano/a Studies",
-                  "avggrd" : 3.272222222222222
-            },
-            {
-                  "class" : "Norlin Scholars",
-                  "avggrd" : 3.7637500000000013
-            },
-            {
-                  "class" : "Environmental Design",
-                  "avggrd" : 3.371569506726457
-            },
-            {
-                  "class" : "Psychology",
-                  "avggrd" : 3.1660170394036244
-            },
-            {
-                  "class" : "Medieval & Early Modern Stdys",
-                  "avggrd" : 3.49
-            },
-            {
-                  "class" : "Art Film Studies",
-                  "avggrd" : 4
-            },
-            {
-                  "class" : "Business Core",
-                  "avggrd" : 2.7409954751131202
-            },
-            {
-                  "class" : "Womens Studies",
-                  "avggrd" : 3.226905829596413
-            },
-            {
-                  "class" : "Afroamerican Studies",
-                  "avggrd" : 3.3839999999999995
-            },
-            {
-                  "class" : "Geography",
-                  "avggrd" : 3.105154394299289
-            },
-            {
-                  "class" : "Religious Studies",
-                  "avggrd" : 3.2378455284552845
-            },
-            {
-                  "class" : "ATLAS",
-                  "avggrd" : 3.5646638655462186
-            },
-            {
-                  "class" : "Film Studies",
-                  "avggrd" : 3.3840784313725507
-            },
-            {
-                  "class" : "Humanities for Engineers",
-                  "avggrd" : 3.56074074074074
-            },
-            {
-                  "class" : "French",
-                  "avggrd" : 3.1267862969004923
-            },
-            {
-                  "class" : "Education",
-                  "avggrd" : 3.7765671641791023
-            },
-            {
-                  "class" : "Anthropology",
-                  "avggrd" : 3.2719488428745422
-            },
-            {
-                  "class" : "Global Studies Res Acad Prgm",
-                  "avggrd" : 2.934166666666666
-            },
-            {
-                  "class" : "Swedish",
-                  "avggrd" : 3.305
-            },
-            {
-                  "class" : "Italian",
-                  "avggrd" : 2.9042729970326384
-            },
-            {
-                  "class" : "Architecture",
-                  "avggrd" : 3.3061818181818188
-            },
-            {
-                  "class" : "Art History",
-                  "avggrd" : 3.2093359375000006
-            },
-            {
-                  "class" : "Arabic Languages",
-                  "avggrd" : 3.40775
-            },
-            {
-                  "class" : "Leadership Res Acad Prgrm",
-                  "avggrd" : 3.5304545454545453
-            },
-            {
-                  "class" : "Russian",
-                  "avggrd" : 3.1633333333333344
-            },
-            {
-                  "class" : "American Indian Studies",
-                  "avggrd" : 3.47
-            },
-            {
-                  "class" : "Aerospace Engineering",
-                  "avggrd" : 3.4956315789473704
-            },
-            {
-                  "class" : "Scandinavian",
-                  "avggrd" : 3.0201694915254236
-            },
-            {
-                  "class" : "Hindi",
-                  "avggrd" : 3.4415000000000004
-            },
-            {
-                  "class" : "History",
-                  "avggrd" : 2.9880711920529865
-            },
-            {
-                  "class" : "Linguistics",
-                  "avggrd" : 3.36904347826087
-            },
-            {
-                  "class" : "Physics",
-                  "avggrd" : 3.0068261562998435
-            },
-            {
-                  "class" : "Physical Education",
-                  "avggrd" : 3.5749999999999993
-            },
-            {
-                  "class" : "International Affairs",
-                  "avggrd" : 3.2551612903225813
-            },
-            {
-                  "class" : "Ecology & Evolutionary Biology",
-                  "avggrd" : 3.0087325349301395
-            },
-            {
-                  "class" : "Integrative Physiology",
-                  "avggrd" : 2.8677734753146185
-            },
-            {
-                  "class" : "Political Science",
-                  "avggrd" : 3.084885572139307
-            },
-            {
-                  "class" : "Sociology",
-                  "avggrd" : 2.996863849765261
-            },
-            {
-                  "class" : "American Studies",
-                  "avggrd" : 3.3020000000000005
-            },
-            {
-                  "class" : "Communication Res Acad Prgm",
-                  "avggrd" : 3.3018421052631575
-            },
-            {
-                  "class" : "Sustainablty&Soc Innovtn  RAP",
-                  "avggrd" : 3.1942857142857144
-            },
-            {
-                  "class" : "Neuroscience",
-                  "avggrd" : 3.462542372881355
-            },
-            {
-                  "class" : "Arts & Sciences Courses",
-                  "avggrd" : 3.3083437500000015
-            },
-            {
-                  "class" : "Classics",
-                  "avggrd" : 3.2268380462724946
-            },
-            {
-                  "class" : "Writing and Rhetoric",
-                  "avggrd" : 3.247572356763137
-            },
-            {
-                  "class" : "Speech, Language & Hearing Sci",
-                  "avggrd" : 3.445294117647061
-            },
-            {
-                  "class" : "Geological Sciences",
-                  "avggrd" : 3.1642380261248184
-            },
-            {
-                  "class" : "Spanish",
-                  "avggrd" : 3.092292800967935
-            },
-            {
-                  "class" : "HNDI",
-                  "avggrd" : 3.1233333333333335
-            },
-            {
-                  "class" : "Operations & Information MGMT",
-                  "avggrd" : 2.9261111111111107
-                  },
-            {
-                  "class" : "Peace & Conflict Studies",
-                  "avggrd" : 3.1121052631578947
-            },
-            {
-                  "class" : "Portuguese",
-                  "avggrd" : 3.367142857142857
-            },
-            {
-                  "class" : "Economics",
-                  "avggrd" : 2.776641651031893
-            },
-            {
-                  "class" : "Sewall Residential Acad Prgm",
-                  "avggrd" : 3.3047222222222223
-            },
-            {
-                  "class" : "Dance",
-                  "avggrd" : 3.585833333333333
-            },
-            {
-                  "class" : "Theatre",
-                  "avggrd" : 3.440138648180245
-            },
-            {
-                  "class" : "Accounting",
-                  "avggrd" : 3.024470588235292
-            },
-            {
-                  "class" : "Business Administration",
-                  "avggrd" : 3.517272727272728
-            },
-            {
-                  "class" : "East Asian Langs & Civilzatns",
-                  "avggrd" : 2.8899999999999997
-            },
-            {
-                  "class" : "Business Law",
-                  "avggrd" : 3.0991666666666666
-            },
-            {
-                  "class" : "Finance",
-                  "avggrd" : 2.980758017492711
-            },
-            {
-                  "class" : "Mathematics",
-                  "avggrd" : 2.709200463499421
-            },
-            {
-                  "class" : "Law School",
-                  "avggrd" : 3.349865525672372
-            },
-            {
-                  "class" : "MBA Core",
-                  "avggrd" : 3.3458273381294976
-            },
-            {
-                  "class" : "MBA Advanced Electives",
-                  "avggrd" : 3.579333333333334
-            },
-            {
-                  "class" : "Management",
-                  "avggrd" : 3.1465083798882687
-            },
-            {
-                  "class" : "Marketing",
-                  "avggrd" : 2.892387096774195
-            },
-            {
-                  "class" : "Real Estate",
-                  "avggrd" : 3.0632467532467533
-            },
-            {
-                  "class" : "Systems",
-                  "avggrd" : 3.1801724137931044
-            },
-            {
-                  "class" : "Architectural Engineering",
-                  "avggrd" : 3.2349751243781113
-            },
-            {
-                  "class" : "Civil Engineering",
-                  "avggrd" : 3.396309148264984
-            },
-            {
-                  "class" : "Telecommunications",
-                  "avggrd" : 3.543209876543209
-            },
-            {
-                  "class" : "Museum",
-                  "avggrd" : 3.8917241379310346
-            },
-            {
-                  "class" : "Journalism",
-                  "avggrd" : 3.451347962382451
-            },
-            {
-                  "class" : "Music Ensemble",
-                  "avggrd" : 3.843022670025196
-            },
-            {
-                  "class" : "Music",
-                  "avggrd" : 3.4923691460055095
-            },
-            {
-                  "class" : "Performance Music",
-                  "avggrd" : 3.742352941176473
-            },
-            {
-                  "class" : "Thesis Music",
-                  "avggrd" : 3.8837499999999996
-            },
-            {
-                  "class" : "Air Force Aerospace Studies",
-                  "avggrd" : 3.6063461538461548
-            },
-            {
-                  "class" : "Military Science",
-                  "avggrd" : 3.6915714285714283
-            },
-            {
-                  "class" : "Naval Science",
-                  "avggrd" : 3.5577083333333337
-            },
-            {
-                  "class" : "Asian Studies",
-                  "avggrd" : 3.3225
-            },
-            {
-                  "class" : "Baker Residential Acad Prgm",
-                  "avggrd" : 3.3041666666666667
-            },
-            {
-                  "class" : "Music Electives",
-                  "avggrd" : 3.313596491228068
-            },
-            {
-                  "class" : "Indonesian",
-                  "avggrd" : 3.44
-            },
-            {
-                  "class" : "Jewish Studies",
-                  "avggrd" : 3.028125
-            },
-            {
-                  "class" : "Curr Emphasis in Soc Respnsbly",
-                  "avggrd" : 3.382857142857143
-            },
-            {
-                  "class" : "Renewable/Sustain Enrgy Inst",
-                  "avggrd" : 3.4575
-            },
-            {
-                  "class" : "Business Minor",
-                  "avggrd" : 2.7433333333333336
-            }
+            { "_id" : "Business Minor", "avggrd" : 2.7433333333333336 },
+            { "_id" : "Renewable/Sustain Enrgy Inst", "avggrd" : 3.4575 },
+            { "_id" : "Curr Emphasis in Soc Respnsbly", "avggrd" : 3.382857142857143 },
+            { "_id" : "Jewish Studies", "avggrd" : 3.028125 },
+            { "_id" : "Indonesian", "avggrd" : 3.44 },
+            { "_id" : "Music Electives", "avggrd" : 3.313596491228068 },
+            { "_id" : "Baker Residential Acad Prgm", "avggrd" : 3.3041666666666667 },
+            { "_id" : "Asian Studies", "avggrd" : 3.3225 },
+            { "_id" : "Naval Science", "avggrd" : 3.5577083333333337 },
+            { "_id" : "Military Science", "avggrd" : 3.6915714285714283 },
+            { "_id" : "Air Force Aerospace Studies", "avggrd" : 3.6063461538461548 },
+            { "_id" : "Thesis Music", "avggrd" : 3.8837499999999996 },
+            { "_id" : "Performance Music", "avggrd" : 3.742352941176473 },
+            { "_id" : "Music", "avggrd" : 3.4923691460055095 },
+            { "_id" : "Music Ensemble", "avggrd" : 3.843022670025196 },
+            { "_id" : "Journalism", "avggrd" : 3.451347962382451 },
+            { "_id" : "Museum", "avggrd" : 3.8917241379310346 },
+            { "_id" : "Telecommunications", "avggrd" : 3.543209876543209 },
+            { "_id" : "Civil Engineering", "avggrd" : 3.396309148264984 },
+            { "_id" : "Architectural Engineering", "avggrd" : 3.2349751243781113 },
+            { "_id" : "Systems", "avggrd" : 3.1801724137931044 },
+            { "_id" : "Real Estate", "avggrd" : 3.0632467532467533 },
+            { "_id" : "Marketing", "avggrd" : 2.892387096774195 },
+            { "_id" : "Management", "avggrd" : 3.1465083798882687 },
+            { "_id" : "MBA Advanced Electives", "avggrd" : 3.579333333333334 },
+            { "_id" : "MBA Core", "avggrd" : 3.3458273381294976 },
+            { "_id" : "Law School", "avggrd" : 3.349865525672372 },
+            { "_id" : "Mathematics", "avggrd" : 2.709200463499421 },
+            { "_id" : "Finance", "avggrd" : 2.980758017492711 },
+            { "_id" : "Business Law", "avggrd" : 3.0991666666666666 },
+            { "_id" : "East Asian Langs & Civilzatns", "avggrd" : 2.8899999999999997 },
+            { "_id" : "Business Administration", "avggrd" : 3.517272727272728 },
+            { "_id" : "Accounting", "avggrd" : 3.024470588235292 },
+            { "_id" : "Theatre", "avggrd" : 3.440138648180245 },
+            { "_id" : "Dance", "avggrd" : 3.585833333333333 },
+            { "_id" : "Sewall Residential Acad Prgm", "avggrd" : 3.3047222222222223 },
+            { "_id" : "Economics", "avggrd" : 2.776641651031893 },
+            { "_id" : "Portuguese", "avggrd" : 3.367142857142857 },
+            { "_id" : "Peace & Conflict Studies", "avggrd" : 3.1121052631578947 },
+            { "_id" : "Operations & Information MGMT", "avggrd" : 2.9261111111111107 },
+            { "_id" : "HNDI", "avggrd" : 3.1233333333333335 },
+            { "_id" : "Spanish", "avggrd" : 3.092292800967935 },
+            { "_id" : "Geological Sciences", "avggrd" : 3.1642380261248184 },
+            { "_id" : "Speech, Language & Hearing Sci", "avggrd" : 3.445294117647061 },
+            { "_id" : "Writing and Rhetoric", "avggrd" : 3.247572356763137 },
+            { "_id" : "Classics", "avggrd" : 3.2268380462724946 },
+            { "_id" : "Arts & Sciences Courses", "avggrd" : 3.3083437500000015 },
+            { "_id" : "Neuroscience", "avggrd" : 3.462542372881355 },
+            { "_id" : "Sustainablty&Soc Innovtn  RAP", "avggrd" : 3.1942857142857144 },
+            { "_id" : "Communication Res Acad Prgm", "avggrd" : 3.3018421052631575 },
+            { "_id" : "American Studies", "avggrd" : 3.3020000000000005 },
+            { "_id" : "Sociology", "avggrd" : 2.996863849765261 },
+            { "_id" : "Political Science", "avggrd" : 3.084885572139307 },
+            { "_id" : "Integrative Physiology", "avggrd" : 2.8677734753146185 },
+            { "_id" : "Ecology & Evolutionary Biology", "avggrd" : 3.0087325349301395 },
+            { "_id" : "International Affairs", "avggrd" : 3.2551612903225813 },
+            { "_id" : "Physical Education", "avggrd" : 3.5749999999999993 },
+            { "_id" : "Physics", "avggrd" : 3.0068261562998435 },
+            { "_id" : "Linguistics", "avggrd" : 3.36904347826087 },
+            { "_id" : "History", "avggrd" : 2.9880711920529865 },
+            { "_id" : "Hindi", "avggrd" : 3.4415000000000004 },
+            { "_id" : "Applied Math", "avggrd" : 2.8597217068645633 },
+            { "_id" : "Afroamerican Studies", "avggrd" : 3.3839999999999995 },
+            { "_id" : "Womens Studies", "avggrd" : 3.226905829596413 },
+            { "_id" : "Business Core", "avggrd" : 2.7409954751131202 },
+            { "_id" : "Art Film Studies", "avggrd" : 4 },
+            { "_id" : "Medieval & Early Modern Stdys", "avggrd" : 3.49 },
+            { "_id" : "Psychology", "avggrd" : 3.1660170394036244 },
+            { "_id" : "Environmental Design", "avggrd" : 3.371569506726457 },
+            { "_id" : "Norlin Scholars", "avggrd" : 3.7637500000000013 },
+            { "_id" : "Chicano/a Studies", "avggrd" : 3.272222222222222 },
+            { "_id" : "Asian American Studies", "avggrd" : 3.4259999999999997 },
+            { "_id" : "Chinese", "avggrd" : 3.293412322274882 },
+            { "_id" : "Farrand Residential Acad Prgm", "avggrd" : 3.4306060606060598 },
+            { "_id" : "Farsi", "avggrd" : 3.717619047619048 },
+            { "_id" : "Honors", "avggrd" : 3.7762000000000002 },
+            { "_id" : "Environmental Studies", "avggrd" : 3.4614068441064654 },
+            { "_id" : "Leadership Minor", "avggrd" : 3.36 },
+            { "_id" : "Engineering Honors", "avggrd" : 3.9684 },
+            { "_id" : "Chemical Engineering", "avggrd" : 3.226335227272723 },
+            { "_id" : "INVST Community Studies", "avggrd" : 3.6517857142857157 },
+            { "_id" : "Presidents Leadership Class", "avggrd" : 3.686046511627907 },
+            { "_id" : "Scandinavian", "avggrd" : 3.0201694915254236 },
+            { "_id" : "Aerospace Engineering", "avggrd" : 3.4956315789473704 },
+            { "_id" : "American Indian Studies", "avggrd" : 3.47 },
+            { "_id" : "Russian", "avggrd" : 3.1633333333333344 },
+            { "_id" : "Leadership Res Acad Prgrm", "avggrd" : 3.5304545454545453 },
+            { "_id" : "Arabic Languages", "avggrd" : 3.40775 },
+            { "_id" : "Art History", "avggrd" : 3.2093359375000006 },
+            { "_id" : "Architecture", "avggrd" : 3.3061818181818188 },
+            { "_id" : "Italian", "avggrd" : 2.9042729970326384 },
+            { "_id" : "Swedish", "avggrd" : 3.305 },
+            { "_id" : "Global Studies Res Acad Prgm", "avggrd" : 2.934166666666666 },
+            { "_id" : "Anthropology", "avggrd" : 3.2719488428745422 },
+            { "_id" : "Education", "avggrd" : 3.7765671641791023 },
+            { "_id" : "French", "avggrd" : 3.1267862969004923 },
+            { "_id" : "Humanities for Engineers", "avggrd" : 3.56074074074074 },
+            { "_id" : "Film Studies", "avggrd" : 3.3840784313725507 },
+            { "_id" : "ATLAS", "avggrd" : 3.5646638655462186 },
+            { "_id" : "Religious Studies", "avggrd" : 3.2378455284552845 },
+            { "_id" : "Geography", "avggrd" : 3.105154394299289 },
+            { "_id" : "English", "avggrd" : 3.356816912644588 },
+            { "_id" : "Korean", "avggrd" : 3.4928571428571438 },
+            { "_id" : "Ethnic Studies", "avggrd" : 3.2737671232876733 },
+            { "_id" : "Libby Residential Acad Prgm", "avggrd" : 3.2744680851063843 },
+            { "_id" : "Convocation Music", "avggrd" : 0 },
+            { "_id" : "German", "avggrd" : 3.0277958236658935 },
+            { "_id" : "Environmental Engineering", "avggrd" : 3.3949999999999996 },
+            { "_id" : "Japanese", "avggrd" : 3.168267716535434 },
+            { "_id" : "Philosophy", "avggrd" : 3.033223787167452 },
+            { "_id" : "Communication", "avggrd" : 3.036998939554614 },
+            { "_id" : "Art Studio and Non-Studio", "avggrd" : 3.502176403207334 },
+            { "_id" : "Center for Western Civilizatio", "avggrd" : 3.0833333333333326 },
+            { "_id" : "Comparative Literature", "avggrd" : 3.880909090909091 },
+            { "_id" : "Lesbn/Gay/Bisexual Stdys", "avggrd" : 3.073571428571429 },
+            { "_id" : "Career Services", "avggrd" : 0 },
+            { "_id" : "Astrophysical & Planetary Sci", "avggrd" : 3.0306109324758856 },
+            { "_id" : "Engineering Management", "avggrd" : 3.6555963302752286 },
+            { "_id" : "Center of the American West", "avggrd" : 2.845970149253731 },
+            { "_id" : "Humanities", "avggrd" : 3.2022499999999994 },
+            { "_id" : "Chemistry", "avggrd" : 2.991250000000001 },
+            { "_id" : "General Engineering", "avggrd" : 3.5082894736842114 },
+            { "_id" : "International Business Cert", "avggrd" : 2.9166666666666674 },
+            { "_id" : "Entrepren & Small Bus Mgmt", "avggrd" : 3.121911764705883 },
+            { "_id" : "Atmospheric & Oceanic Sciences", "avggrd" : 3.2507551487414204 },
+            { "_id" : "Hebrew", "avggrd" : 3.240140845070422 },
+            { "_id" : "Mechanical Engineering", "avggrd" : 3.320564516129035 },
+            { "_id" : "Electrical & Computer Engr", "avggrd" : 3.23732786885246 },
+            { "_id" : "Computer Science", "avggrd" : 3.377047413793106 },
+            { "_id" : "Molecular Cell & Dev Biology", "avggrd" : 3.3528491620111787 }
+
       ];
       var chart = new dimple.chart(svg, data);
-      chart.addCategoryAxis("x", "class");
+      chart.addCategoryAxis("x", "_id");
       chart.addMeasureAxis("y", "avggrd");
       chart.addSeries(null, dimple.plot.bar);
       chart.draw();

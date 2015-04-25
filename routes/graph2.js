@@ -13,7 +13,7 @@ module.exports = function(app) {
             limit: 1000
         }, function(err, docs) {
 
-            res.render('graph3.jade', {
+            res.render('graph2.jade', {
                 course: docs
 
             })
