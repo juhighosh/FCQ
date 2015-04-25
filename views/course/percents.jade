@@ -12,10 +12,8 @@ script(type='text/javascript').
   myChart.setBounds(60, 30, 900, 305);
   var x = myChart.addCategoryAxis("x", "YearTerm");
   x.addOrderRule("Date");
-  var d = myChart.addMeasureAxis("y", "AVG_GRD");
   var y = myChart.addCategoryAxis("y", "AVG_GRD");
-  var c = myChart.addCategoryAxis("z", "insname1")
-  d.overrideMin =0
+  var c = myChart.addMeasureAxis("z", "insname1")
   var s = myChart.addSeries(["insname1", "CourseTitle"], dimple.plot.bubble);
   var z = myChart.addSeries(null, dimple.plot.line);
   myChart.addLegend(850, 50, 380, 320, "right");
