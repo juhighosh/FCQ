@@ -1,3 +1,4 @@
-- var underscored_name = item["name"]
-a(href='/instructor/view/' + underscored_name)
-    = item["name"]
+each c in item['courses']
+  div.row
+    a(href='/instructor/view/' + c.name)
+        =c.name

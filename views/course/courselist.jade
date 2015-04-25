@@ -12,10 +12,13 @@ block content
             | Term
         div.two.columns
             | Course
-        div.three.columns
-            | Instructor
         div.four.columns
-            | Buff Score        
+            | Instructor
+        div.two.columns
+            | Average Grade
+        div.two.columns
+            | FCQ
+
 
     each item in course
         div.row
@@ -29,3 +32,5 @@ block content
                 include field_instructors
             div.two.columns
                 include field_grade
+            div.two.columns
+                include FCQ
