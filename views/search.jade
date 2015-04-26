@@ -1,6 +1,22 @@
-html
-  body
-    form(method='post')
-      input(type='text', size='80', name='query')
-      |    
-      input.submitButton(type='submit', value='Search')
+extends layout.jade
+
+block content
+ h5 Search
+  div.row
+    div.column.8
+        form
+              br
+              br
+              br
+              | Department:
+              br
+              input(type='text', name='dept')
+              br
+              | Average Grade:
+              br
+              input(type='text', name='lastname')
+              br
+              input(type='button', onclick='/department/list/dept', value='Submit')
+                                   
+                       
+ 
