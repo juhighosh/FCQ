@@ -2,6 +2,12 @@ extends layout.jade
 block content
     script(type='text/javascript').
       var svg = dimple.newSvg("body", 1900, 800);
+      svg.append("rect")
+       .attr("x", "8px")
+       .attr("y", "8px")
+       .attr("width", "100%")
+       .attr("height", "100%")
+       .style("fill", "rgb(222, 230, 237)");
       var data = [
             { "_id" : "Business Minor", "avggrd" : 2.7433333333333336 },
             { "_id" : "Renewable/Sustain Enrgy Inst", "avggrd" : 3.4575 },
