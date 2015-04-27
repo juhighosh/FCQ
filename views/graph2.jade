@@ -143,5 +143,5 @@ block content
       var chart = new dimple.chart(svg, data);
       chart.addCategoryAxis("x", "_id");
       chart.addMeasureAxis("y", "avggrd");
-      chart.addSeries(null, dimple.plot.bar);
+      chart.addSeries(["avggrd"], dimple.plot.bar);
       chart.draw();
