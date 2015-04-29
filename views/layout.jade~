@@ -18,7 +18,7 @@ html(lang='en')
 
     div.container
         h1
-            a(href='/') CU Boulder FCQ
+            a(href='google.com') CU Boulder FCQ
         include navbar
 
     div#content
