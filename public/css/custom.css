@@ -18,3 +18,9 @@ img {
 	border: 1px #aaa solid;
 	padding: 2px;
 }
+
+.container {  /* no .hsla use necessary! */
+   background-color: #ccc; /* light grey fallback */
+   background-color: hsla(208, 100%, 96%, 0.69); /* white with alpha */
+   padding: 30px;
+}
